@@ -13,35 +13,24 @@
       "**/react-native",
       "**/react-native/**",
       "**/react-native-codegen",
-      "**/react-native-dev-menu",
-      "**/react-native-macos",
-      "**/react-native-windows"
+      "**/react-native-dev-menu"
     ]
   },
   "scripts": {
-    "android:metro": "yarn workspace @my-app/mobile start",
-    "android:start": "yarn workspace @my-app/mobile android",
-    "android:studio": "yarn workspace @my-app/mobile studio",
-    "ios:metro": "yarn workspace @my-app/mobile start",
-    "ios:start": "yarn workspace @my-app/mobile ios",
-    "ios:xcode": "yarn workspace @my-app/mobile xcode",
-    "ios:pods": "yarn workspace @my-app/mobile pods",
-    "web:start": "yarn workspace @my-app/web start",
-    "web:build": "yarn workspace @my-app/web build",
+    "android:metro": "yarn workspace @athler/mobile start",
+    "android:start": "yarn workspace @athler/mobile android",
+    "android:studio": "yarn workspace @athler/mobile studio",
+    "ios:metro": "yarn workspace @athler/mobile start",
+    "ios:start": "yarn workspace @athler/mobile ios",
+    "ios:xcode": "yarn workspace @athler/mobile xcode",
+    "ios:pods": "yarn workspace @athler/mobile pods",
+    "web:start": "yarn workspace @athler/web start",
+    "web:build": "yarn workspace @athler/web build",
     "lint": "ultra -r lint",
     "lint:fix": "ultra -r lint:fix",
     "test": "ultra -r test",
     "typecheck": "ultra -r typecheck"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "@typescript-eslint/parser": "^5.60.1",
-    "eslint": "^8.43.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react-app": "^6.2.2",
-    "eslint-plugin-react-native": "^4.0.0",
-    "prettier": "^2.3.2",
-    "typescript": "^5.1.6",
-    "ultra-runner": "^3.10.5"
   }
 }
