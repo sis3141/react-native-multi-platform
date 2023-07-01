@@ -1,0 +1,10 @@
+{
+  "editor.showUnused": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "explorer.sortOrder": "foldersNestsFiles"
+}

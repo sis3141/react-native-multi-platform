@@ -26,6 +26,8 @@
     "ios:pods": "yarn workspace @athler/mobile pods",
     "web:start": "yarn workspace @athler/web start",
     "web:build": "yarn workspace @athler/web build",
+    "server:linux" : "yarn workspace @athler/server linux-pm2",
+    "server:windows" : "yarn workspace @athler/server windows-nodemon",
     "lint": "ultra -r lint",
     "lint:fix": "ultra -r lint:fix",
     "test": "ultra -r test",
