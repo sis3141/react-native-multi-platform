@@ -25,8 +25,7 @@
         "ecmaVersion": 2018
       },
       "plugins": ["unused-imports"],
-      "extends": ["eslint:recommended", "prettier"],
-      "rules": {"no-unused-vars" : "warn"}
+      "extends": ["eslint:recommended", "prettier"]
     }
   ],
   "settings": {
@@ -37,7 +36,15 @@
   "rules": {
     "no-unused-vars": "warn",
     "prefer-const": "warn",
-    "unused-imports/no-unused-imports": "warn"
+    "unused-imports/no-unused-imports": "warn",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ]
   }
 
 }
