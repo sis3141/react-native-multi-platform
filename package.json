@@ -17,6 +17,7 @@
     ]
   },
   "scripts": {
+    "reset-metro-cache" : "yarn workspace @athler/mobile reset-cache",
     "android:metro": "yarn workspace @athler/mobile start",
     "android:start": "yarn workspace @athler/mobile android",
     "android:studio": "yarn workspace @athler/mobile studio",
