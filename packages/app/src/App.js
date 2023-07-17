@@ -8,11 +8,14 @@ import {
   View,
 } from "react-native";
 import LogoSrc from "./logo.png";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
 
 const hello = 0;
 // console.log(hello);
 
-export function App() {
+const Stack = createStackNavigator();
+function HomeScreen () {
   return (
     <SafeAreaView style={styles.root}>
       <Image style={styles.logo} source={LogoSrc} />
@@ -24,6 +27,17 @@ export function App() {
         </View>
       </View>
     </SafeAreaView>
+  )
+}
+
+export function App() {
+  return (
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomeScreen}/>
+    
+    </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

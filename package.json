@@ -7,13 +7,22 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/@react-native-async-storage/async-storage",
       "**/react",
       "**/react-dom",
       "**/react-native",
       "**/react-native/**",
+      "**/react-native-web",
       "**/react-native-codegen",
-      "**/react-native-dev-menu"
+      "**/react-native-dev-menu",
+      "**/react-native-svg",
+      "**/react-native-reanimated",
+      "**/react-native-gesture-handler",
+      "**/react-native-animateable-text",
+      "**/@react-navigation/native",
+      "**/@react-navigation/stack",
+      "**/react-native-screens",
+      "**/react-native-safe-area-context",
+      "**/@react-native-async-storage/async-storage"
     ]
   },
   "scripts": {
@@ -45,5 +54,6 @@
     "prettier": "^2.8.8",
     "typescript": "^5.1.6",
     "ultra-runner": "^3.10.5"
-  }
+  },
+  "packageManager": "yarn@3.6.1"
 }
