@@ -5,7 +5,11 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "studio": "studio android",
+    "xcode": "xed ios",
+    "pods": "pod-install",
     "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
     "start": "react-native start",
     "test": "jest"
   },

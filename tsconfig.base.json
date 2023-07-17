@@ -13,6 +13,8 @@
     "strict": true,
     // Solves https://github.com/DefinitelyTyped/DefinitelyTyped/issues/16825
     "skipLibCheck": true,
-    "target": "esnext"
+    "target": "esnext",
+    "declaration": true,
+    "declarationMap": true,
   }
 }
