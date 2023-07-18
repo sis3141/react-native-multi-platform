@@ -1,15 +1,16 @@
 {
   "root": true,
   "ignorePatterns": ["**/*.d.ts"],
-  
+
   "parser": "@typescript-eslint/parser",
+  "plugins": ["unused-imports", "import", "prettier"],
+  "extends": ["eslint:recommended"],
   "overrides": [
     {
       "files": "**/*.+(ts|tsx)",
-      "plugins": ["@typescript-eslint", "react-native", "unused-imports"],
+      "plugins": ["@typescript-eslint", "react-native"],
       "extends": [
         "plugin:react/recommended",
-        "prettier",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended"
       ]
@@ -24,8 +25,7 @@
       "parserOptions": {
         "ecmaVersion": 2018
       },
-      "plugins": ["unused-imports"],
-      "extends": ["eslint:recommended", "prettier"]
+      "extends": ["plugin:react/recommended"]
     }
   ],
   "settings": {
@@ -40,11 +40,27 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
+        "groups": [
+          "type",
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{react,react-native}",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "react-native"],
         "newlines-between": "always",
         "alphabetize": { "order": "asc", "caseInsensitive": true }
       }
     ]
   }
-
 }
