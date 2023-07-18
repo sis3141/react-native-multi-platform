@@ -13,7 +13,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import LogoSrc from "./logo.png";
 
-const hello = 0;
+const hello = 0; //test code for lint check
 // console.log(hello);
 
 const Stack = createStackNavigator();
