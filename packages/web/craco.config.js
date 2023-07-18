@@ -1,6 +1,7 @@
-const webpack = require("webpack");
-const { getWebpackTools } = require("react-native-monorepo-tools");
 const path = require("path");
+
+const { getWebpackTools } = require("react-native-monorepo-tools");
+const webpack = require("webpack");
 
 const monorepoWebpackTools = getWebpackTools();
 

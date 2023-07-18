@@ -3,7 +3,7 @@
   "ignorePatterns": ["**/*.d.ts"],
 
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-native", "unused-imports", "import", "prettier"],
+  "plugins": ["@react-native", "unused-imports", "import", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
