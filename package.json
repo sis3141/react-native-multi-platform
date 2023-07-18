@@ -18,8 +18,7 @@
       "**/react-native-reanimated",
       "**/react-native-gesture-handler",
       "**/react-native-animateable-text",
-      "**/@react-navigation/native",
-      "**/@react-navigation/stack",
+      "**/@react-navigation/**",
       "**/react-native-screens",
       "**/react-native-safe-area-context",
       "**/@react-native-async-storage/async-storage"
