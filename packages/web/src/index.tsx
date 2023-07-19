@@ -1,16 +1,11 @@
-import React from "react";
+import { AppRegistry } from "react-native";
 
 import { App } from "@athler/app";
-import ReactDOM from "react-dom/client";
 
 import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+AppRegistry.registerComponent("App", () => App);
+AppRegistry.runApplication("App", { rootTag: document.getElementById("root") });
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

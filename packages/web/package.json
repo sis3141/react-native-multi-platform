@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build --verbose && gzipper compress ./build/static/js",
+    "build": "craco build && gzipper compress ./build/static/js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
@@ -49,6 +49,7 @@
     "@craco/craco": "^7.1.0",
     "babel-plugin-react-native-web": "^0.19.6",
     "gzipper": "^7.2.0",
+    "metro-react-native-babel-preset": "^0.77.0",
     "react-native-monorepo-tools": "^1.2.1"
   }
 }

@@ -11,17 +11,16 @@ module.exports = {
     presets: ["@babel/preset-react"],
   },
   webpack: {
-    configure: {
-      module: {
-        rules: [
-          {
-            test: /(\.ts$|\.tsx$)/,
-            use: "babel-loader",
-          },
-        ],
-      },
-    },
     configure: (webpackConfig) => {
+      let targetIndex = 1;
+      if (webpackConfig.module.rules.length === 1) {
+        targetIndex = 0;
+      }
+      webpackConfig.module.rules[targetIndex].oneOf.unshift({
+        test: /(\.ts$|\.tsx$)/,
+        use: "babel-loader",
+      });
+
       // Allow importing from external workspaces.
       // monorepoWebpackTools.enableWorkspacesResolution(webpackConfig);
       // Ensure nohoisted libraries are resolved from this workspace.

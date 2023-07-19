@@ -1,13 +1,11 @@
 const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
-
-// metro-monorepo configs
-const exclusionList = require("metro-config/src/defaults/exclusionList");
-const {getMetroTools,getMetroAndroidAssetsResolutionFix} = require("react-native-monorepo-tools");
+const exclusionList = require('metro-config/src/defaults/exclusionList');
+const {
+  getMetroTools,
+  getMetroAndroidAssetsResolutionFix,
+} = require('react-native-monorepo-tools');
 const monorepoMetroTools = getMetroTools();
 const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix();
-
-
-
 
 /**
  * Metro configuration
@@ -16,16 +14,16 @@ const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix();
  * @type {import('metro-config').MetroConfig}
  */
 const config = {
-  transformer : {
+  transformer: {
     publicPath: androidAssetsResolutionFix.publicPath,
   },
   server: {
     // ...and to the server middleware.
-    enhanceMiddleware: (middleware) => {
+    enhanceMiddleware: middleware => {
       return androidAssetsResolutionFix.applyMiddleware(middleware);
     },
   },
-    // Add additional Yarn workspace package roots to the module map.
+  // Add additional Yarn workspace package roots to the module map.
   // This allows importing importing from all the project's packages.
   watchFolders: monorepoMetroTools.watchFolders,
   resolver: {
