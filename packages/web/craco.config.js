@@ -2,6 +2,7 @@ const path = require("path");
 
 const { getWebpackTools } = require("react-native-monorepo-tools");
 const webpack = require("webpack");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const monorepoWebpackTools = getWebpackTools();
 
@@ -43,6 +44,7 @@ module.exports = {
       new webpack.DefinePlugin({
         __DEV__: process.env.NODE_ENV !== "production",
       }),
+      new BundleAnalyzerPlugin(),
     ],
   },
 };
