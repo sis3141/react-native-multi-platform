@@ -1,0 +1,12 @@
+{
+  "extends": ["../../.eslintrc"],
+  "overrides": [
+    {
+      "files": "**/*.web.*",
+      "env": {
+        "browser": true,
+        "es6": true
+      }
+    }
+  ]
+}

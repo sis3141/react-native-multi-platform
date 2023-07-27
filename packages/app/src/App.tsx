@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Image,
   Platform,
@@ -15,7 +14,6 @@ import LogoSrc from "./logo.png";
 
 const hello = 0; //test code for lint check
 // console.log(hello);
-
 const Stack = createStackNavigator();
 function HomeScreen() {
   return (
