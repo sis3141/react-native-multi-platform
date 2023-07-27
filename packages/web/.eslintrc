@@ -2,7 +2,7 @@
   "extends": ["../../.eslintrc"],
   "overrides": [
     {
-      "files": "**/*.+(js|jsx)",
+      "files": "**/*.+(js|jsx|ts|tsx)",
       "env": {
         "browser": true,
         "node": true,
