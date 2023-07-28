@@ -1,4 +1,6 @@
+import { useState } from "react";
 import {
+  Button,
   Image,
   Platform,
   SafeAreaView,
@@ -7,6 +9,7 @@ import {
   View,
 } from "react-native";
 
+import { LocalStorage } from "@athler/lib";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -14,8 +17,10 @@ import LogoSrc from "./logo.png";
 
 const hello = 0; //test code for lint check
 // console.log(hello);
+
 const Stack = createStackNavigator();
 function HomeScreen() {
+  const [localValue, setLocalValue] = useState("");
   return (
     <SafeAreaView style={styles.root}>
       <Image style={styles.logo} source={LogoSrc} />
@@ -26,6 +31,18 @@ function HomeScreen() {
           <Text style={styles.platformValue}>{Platform.OS}</Text>
         </View>
       </View>
+      <Button
+        onPress={async () => {
+          await LocalStorage.setItem(
+            "hello",
+            Math.random().toString(36).substr(2, 5)
+          );
+          const res = await LocalStorage.getItem("hello");
+          setLocalValue(res || "");
+        }}
+        title="Update local value"
+      />
+      <Text style={styles.text}>{`local storage val! : ${localValue}`}</Text>
     </SafeAreaView>
   );
 }
