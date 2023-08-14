@@ -13,8 +13,8 @@
     "strict": true,
     "skipLibCheck": true,
     "target": "esnext"
-    // "typeRoots": ["./types"]
     // "declaration": true,
     // "declarationMap": true,
-  }
+  },
+  "include": ["types"]
 }

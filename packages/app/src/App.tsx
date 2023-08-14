@@ -9,7 +9,7 @@ import {
   View,
 } from "react-native";
 
-import { LocalStorage } from "@athler/lib";
+import { LocalStorage, envConfig } from "@athler/lib";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -21,6 +21,7 @@ const hello = 0; //test code for lint check
 const Stack = createStackNavigator();
 function HomeScreen() {
   const [localValue, setLocalValue] = useState("");
+  console.log("env info : ", envConfig, process.env);
   return (
     <SafeAreaView style={styles.root}>
       <Image style={styles.logo} source={LogoSrc} />

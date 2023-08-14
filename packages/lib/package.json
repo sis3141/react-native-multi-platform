@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "main": "src",
-  "devDependencies": {
-    "@react-native-async-storage/async-storage": "^1.19.1"
-  },
   "peerDependencies": {
-    "@react-native-async-storage/async-storage": "*"
+    "@react-native-async-storage/async-storage": "*",
+    "react-native-dotenv": "*"
+  },
+  "devDependencies": {
+    "@react-native-async-storage/async-storage": "^1.19.2"
   }
 }

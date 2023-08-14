@@ -4,6 +4,7 @@
 .history
 .jest
 .next
+.env.*
 
 # .vscode
 # recommend share lint settings for project

@@ -1,11 +1,14 @@
 const path = require("path");
 
+const dotenv = require("dotenv");
 const { getWebpackTools } = require("react-native-monorepo-tools");
 const webpack = require("webpack");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const monorepoWebpackTools = getWebpackTools();
-
+dotenv.config({
+  path: path.resolve(__dirname, `../../.env.${process.env.NODE_ENV}`),
+});
 module.exports = {
   babel: {
     plugins: ["babel-plugin-react-native-web"],
