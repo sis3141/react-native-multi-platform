@@ -8,9 +8,11 @@ import {
   StyleSheet,
   Text,
   View,
+  TextProps,
 } from "react-native";
 
 import {
+  AngleGradientText,
   COOKIE_KEYS,
   FastImage,
   LocalStorage,
@@ -31,6 +33,15 @@ const hello = 0; //test code for lint check
 // console.log(hello);
 
 const Stack = createStackNavigator();
+
+const TestMaskText = (props: TextProps) => (
+  <AngleGradientText
+    startColor={"rgba(216, 60, 255, 1)"}
+    endColor={"rgba(37, 164, 255, 1)"}
+    angle={131}
+    {...props}
+  />
+);
 
 async function axiosTest() {
   console.log("try axios :", axios);
@@ -106,6 +117,10 @@ function HomeScreen() {
           style={{ width: 100, height: 100 }}
         />
         <Text style={[styles.text, { marginTop: 20 }]}>this is LottieView</Text>
+
+        <TestMaskText style={styles.text}>
+          This is masked gradient text
+        </TestMaskText>
       </ScrollView>
     </SafeAreaView>
   );
