@@ -2,10 +2,18 @@
   "extends": ["../../.eslintrc"],
   "overrides": [
     {
-      "files": "**/*.web.*",
+      "files": "**/*.+(js|jsx|ts|tsx)",
+      "env": {
+        "es6": true,
+        "node": true
+      }
+    },
+    {
+      "files": "**/**.web.+(js|jsx|ts|tsx)",
       "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "node": true
       }
     }
   ]

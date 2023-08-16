@@ -5,9 +5,7 @@
   "main": "src",
   "peerDependencies": {
     "@react-native-async-storage/async-storage": "*",
+    "@react-native-community/netinfo": "*",
     "react-native-dotenv": "*"
-  },
-  "devDependencies": {
-    "@react-native-async-storage/async-storage": "^1.19.2"
   }
 }

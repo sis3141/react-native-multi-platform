@@ -4,12 +4,13 @@ import {
   Image,
   Platform,
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   View,
 } from "react-native";
 
-import { LocalStorage, envConfig } from "@athler/lib";
+import { LocalStorage, envConfig, initNetCheck } from "@athler/lib";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -21,29 +22,35 @@ const hello = 0; //test code for lint check
 const Stack = createStackNavigator();
 function HomeScreen() {
   const [localValue, setLocalValue] = useState("");
+  initNetCheck().then((netCheckRes) => {
+    console.log("net check res : ", netCheckRes);
+  });
+
   console.log("env info : ", envConfig, process.env);
   return (
     <SafeAreaView style={styles.root}>
-      <Image style={styles.logo} source={LogoSrc} />
-      <Text style={styles.text}>Hello from React Native!</Text>
-      <View style={styles.platformRow}>
-        <Text style={styles.text}>Platform: </Text>
-        <View style={styles.platformBackground}>
-          <Text style={styles.platformValue}>{Platform.OS}</Text>
+      <ScrollView>
+        <Image style={styles.logo} source={LogoSrc} />
+        <Text style={styles.text}>Hello from React Native!</Text>
+        <View style={styles.platformRow}>
+          <Text style={styles.text}>Platform: </Text>
+          <View style={styles.platformBackground}>
+            <Text style={styles.platformValue}>{Platform.OS}</Text>
+          </View>
         </View>
-      </View>
-      <Button
-        onPress={async () => {
-          await LocalStorage.setItem(
-            "hello",
-            Math.random().toString(36).substr(2, 5)
-          );
-          const res = await LocalStorage.getItem("hello");
-          setLocalValue(res || "");
-        }}
-        title="Update local value"
-      />
-      <Text style={styles.text}>{`local storage val! : ${localValue}`}</Text>
+        <Button
+          onPress={async () => {
+            await LocalStorage.setItem(
+              "hello",
+              Math.random().toString(36).substr(2, 5)
+            );
+            const res = await LocalStorage.getItem("hello");
+            setLocalValue(res || "");
+          }}
+          title="Update local value"
+        />
+        <Text style={styles.text}>{`local storage val! : ${localValue}`}</Text>
+      </ScrollView>
     </SafeAreaView>
   );
 }
