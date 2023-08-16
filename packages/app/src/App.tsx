@@ -11,9 +11,11 @@ import {
 } from "react-native";
 
 import {
+  COOKIE_KEYS,
   FastImage,
   LocalStorage,
   LottieView,
+  cookieController,
   envConfig,
   getDeviceInfo,
   initNetCheck,
@@ -43,6 +45,7 @@ async function axiosTest() {
 
 function HomeScreen() {
   const [localValue, setLocalValue] = useState("");
+  const [cookieValue, setCookieValue] = useState("");
   useEffect(() => {
     initNetCheck().then((netCheckRes) => {
       console.log("net check res : ", netCheckRes);
@@ -83,6 +86,18 @@ function HomeScreen() {
         <Text
           style={styles.text}
         >{`check local storage val! : ${localValue}`}</Text>
+        <Button
+          onPress={async () => {
+            await cookieController.set(
+              COOKIE_KEYS.REFRESH_TOKEN,
+              Math.random().toString(36).substr(2, 5)
+            );
+            const res = await cookieController.get(COOKIE_KEYS.REFRESH_TOKEN);
+            setCookieValue(res || "");
+          }}
+          title="Update cookie value"
+        />
+        <Text style={styles.text}>{`check cookie val! : ${cookieValue}`}</Text>
 
         <LottieView
           source={LOTTIE.testLottie}
