@@ -3,16 +3,18 @@
   "version": "0.0.1",
   "private": true,
   "main": "src",
-  "types": "./src/index.d.ts",
   "peerDependencies": {
     "@react-native-async-storage/async-storage": "*",
     "@react-native-community/netinfo": "*",
     "lottie-react-native": "*",
+    "react-native-device-info": "*",
     "react-native-dotenv": "*"
   },
   "devDependencies": {
     "@react-native-async-storage/async-storage": "^1.19.2",
     "@types/react-native": "^0.72.2",
-    "lottie-react-native": "^6.1.2"
+    "lottie-react-native": "^6.1.2",
+    "react-device-detect": "^2.2.3",
+    "react-native-device-info": "^10.8.0"
   }
 }

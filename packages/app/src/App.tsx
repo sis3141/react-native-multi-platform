@@ -10,7 +10,13 @@ import {
   View,
 } from "react-native";
 
-import { LocalStorage, LottieView, envConfig, initNetCheck } from "@athler/lib";
+import {
+  LocalStorage,
+  LottieView,
+  envConfig,
+  getDeviceInfo,
+  initNetCheck,
+} from "@athler/lib";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import axios from "axios";
@@ -40,10 +46,11 @@ function HomeScreen() {
     initNetCheck().then((netCheckRes) => {
       console.log("net check res : ", netCheckRes);
     });
+    console.log("env info : ", envConfig, process.env);
+    console.log("app ver ", getDeviceInfo.version());
     axiosTest();
   }, []);
 
-  console.log("env info : ", envConfig, process.env);
   return (
     <SafeAreaView style={styles.root}>
       <ScrollView contentContainerStyle={{ alignItems: "center" }}>
