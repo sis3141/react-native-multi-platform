@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Button,
   Image,
@@ -13,6 +13,7 @@ import {
 import { LocalStorage, LottieView, envConfig, initNetCheck } from "@athler/lib";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import axios from "axios";
 
 import { LOTTIE } from "./assets/localAssetMap";
 import LogoSrc from "./logo.png";
@@ -21,11 +22,26 @@ const hello = 0; //test code for lint check
 // console.log(hello);
 
 const Stack = createStackNavigator();
+
+async function axiosTest() {
+  console.log("try axios :", axios);
+  try {
+    const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1");
+
+    console.log("axios ress!", res);
+  } catch (error) {
+    console.log("error from axios ...", error);
+  }
+}
+
 function HomeScreen() {
   const [localValue, setLocalValue] = useState("");
-  initNetCheck().then((netCheckRes) => {
-    console.log("net check res : ", netCheckRes);
-  });
+  useEffect(() => {
+    initNetCheck().then((netCheckRes) => {
+      console.log("net check res : ", netCheckRes);
+    });
+    axiosTest();
+  }, []);
 
   console.log("env info : ", envConfig, process.env);
   return (

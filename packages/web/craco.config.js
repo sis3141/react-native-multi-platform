@@ -9,6 +9,20 @@ const monorepoWebpackTools = getWebpackTools();
 dotenv.config({
   path: path.resolve(__dirname, `../../.env.${process.env.NODE_ENV}`),
 });
+
+function getFileLoaderRule(rules) {
+  for (const rule of rules) {
+    if ("oneOf" in rule) {
+      const found = getFileLoaderRule(rule.oneOf);
+      if (found) {
+        return found;
+      }
+    } else if (rule.test === undefined && rule.type === "asset/resource") {
+      return rule;
+    }
+  }
+}
+
 module.exports = {
   babel: {
     plugins: ["babel-plugin-react-native-web"],
@@ -20,6 +34,9 @@ module.exports = {
       if (webpackConfig.module.rules.length === 1) {
         targetIndex = 0;
       }
+      const fileLoaderRule = getFileLoaderRule(webpackConfig.module.rules);
+      fileLoaderRule.exclude.push(/\.cjs$/);
+
       webpackConfig.module.rules[targetIndex].oneOf.unshift({
         test: /(\.ts$|\.tsx$)/,
         use: "babel-loader",
