@@ -10,10 +10,11 @@ import {
   View,
 } from "react-native";
 
-import { LocalStorage, envConfig, initNetCheck } from "@athler/lib";
+import { LocalStorage, LottieView, envConfig, initNetCheck } from "@athler/lib";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
+import { LOTTIE } from "./assets/localAssetMap";
 import LogoSrc from "./logo.png";
 
 const hello = 0; //test code for lint check
@@ -29,7 +30,7 @@ function HomeScreen() {
   console.log("env info : ", envConfig, process.env);
   return (
     <SafeAreaView style={styles.root}>
-      <ScrollView>
+      <ScrollView contentContainerStyle={{ alignItems: "center" }}>
         <Image style={styles.logo} source={LogoSrc} />
         <Text style={styles.text}>Hello from React Native!</Text>
         <View style={styles.platformRow}>
@@ -38,6 +39,7 @@ function HomeScreen() {
             <Text style={styles.platformValue}>{Platform.OS}</Text>
           </View>
         </View>
+
         <Button
           onPress={async () => {
             await LocalStorage.setItem(
@@ -50,6 +52,14 @@ function HomeScreen() {
           title="Update local value"
         />
         <Text style={styles.text}>{`local storage val! : ${localValue}`}</Text>
+
+        <Text style={[styles.text, { marginTop: 20 }]}>LottieView</Text>
+        <LottieView
+          source={LOTTIE.testLottie}
+          autoPlay
+          loop
+          style={{ width: 100, height: 100 }}
+        />
       </ScrollView>
     </SafeAreaView>
   );

@@ -6,6 +6,10 @@
   "peerDependencies": {
     "@react-native-async-storage/async-storage": "*",
     "@react-native-community/netinfo": "*",
+    "lottie-react-native": "*",
     "react-native-dotenv": "*"
+  },
+  "devDependencies": {
+    "lottie-react-native": "^6.1.2"
   }
 }

@@ -49,5 +49,8 @@ module.exports = {
       }),
       new BundleAnalyzerPlugin(),
     ],
+    alias: {
+      "lottie-react-native": "react-native-web-lottie",
+    },
   },
 };

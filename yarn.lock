@@ -70,9 +70,12 @@ __metadata:
 "@athler/lib@*, @athler/lib@workspace:packages/lib":
   version: 0.0.0-use.local
   resolution: "@athler/lib@workspace:packages/lib"
+  dependencies:
+    lottie-react-native: ^6.1.2
   peerDependencies:
     "@react-native-async-storage/async-storage": "*"
     "@react-native-community/netinfo": "*"
+    lottie-react-native: "*"
     react-native-dotenv: "*"
   languageName: unknown
   linkType: soft
@@ -95,6 +98,7 @@ __metadata:
     "@types/react-test-renderer": ^18.0.0
     babel-jest: ^29.2.1
     jest: ^29.2.1
+    lottie-react-native: ^6.1.2
     metro-react-native-babel-preset: 0.76.5
     react: 18.2.0
     react-native: 0.72.1
@@ -144,6 +148,7 @@ __metadata:
     react-native-safe-area-context: ^4.7.1
     react-native-screens: ^3.22.1
     react-native-web: ^0.19.6
+    react-native-web-lottie: ^1.4.4
     react-scripts: 5.0.1
     web-vitals: ^2.1.4
     webpack-bundle-analyzer: ^4.9.0
@@ -11964,6 +11969,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-react-native@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "lottie-react-native@npm:6.1.2"
+  peerDependencies:
+    react: "*"
+    react-native: ">=0.46"
+    react-native-windows: ">=0.63.x"
+  peerDependenciesMeta:
+    react-native-windows:
+      optional: true
+  checksum: 98132b4f1ba2c246dceabe7a48388578f4f2f1ca2b79cd2e0d20b7fc4c10c2ef23b6b41e175b19d50c840f3c4d34ff91a0ba055c16704699791dffa6edf956a8
+  languageName: node
+  linkType: hard
+
+"lottie-web@npm:^5.7.1":
+  version: 5.12.2
+  resolution: "lottie-web@npm:5.12.2"
+  checksum: af5bc3bc405fd760de8b17a36158d5a8c3e8c586c711d0c63681ddf056b65bc6b54ea36b1fcad782fb02dbe12e696a40e0ba72daf41b8f10ab5b5d1113793636
+  languageName: node
+  linkType: hard
+
 "lower-case@npm:^2.0.2":
   version: 2.0.2
   resolution: "lower-case@npm:2.0.2"
@@ -15491,6 +15517,17 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 3b592ff31d9dfde5e2ce967f85f3ad17a94f4f3bee2248a3dad9ec791e7cda72a431f86b468b3b2a70ebeffb49b462f8162668a58fb9ddabb10b5a369816850d
+  languageName: node
+  linkType: hard
+
+"react-native-web-lottie@npm:^1.4.4":
+  version: 1.4.4
+  resolution: "react-native-web-lottie@npm:1.4.4"
+  dependencies:
+    lottie-web: ^5.7.1
+  peerDependencies:
+    react-native-web: "*"
+  checksum: a9a55c5f0af2b16a278f5a6fd78067a6c4556dd8200747f958a896f5e2635a21b418902837b549f1338bef34abf942ff24aa50fc7cce88b96095cc8aa6a6bb29
   languageName: node
   linkType: hard
 
