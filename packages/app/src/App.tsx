@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import {
+  FastImage,
   LocalStorage,
   LottieView,
   envConfig,
@@ -53,9 +54,14 @@ function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.root}>
-      <ScrollView contentContainerStyle={{ alignItems: "center" }}>
+      <ScrollView
+        style={{ flex: 1 }}
+        contentContainerStyle={{ alignItems: "center" }}
+      >
         <Image style={styles.logo} source={LogoSrc} />
-        <Text style={styles.text}>Hello from React Native!</Text>
+        <Text style={styles.text}>this is Image!</Text>
+        <FastImage style={styles.logo} source={LogoSrc} />
+        <Text style={styles.text}>this is FastImage!</Text>
         <View style={styles.platformRow}>
           <Text style={styles.text}>Platform: </Text>
           <View style={styles.platformBackground}>
@@ -74,15 +80,17 @@ function HomeScreen() {
           }}
           title="Update local value"
         />
-        <Text style={styles.text}>{`local storage val! : ${localValue}`}</Text>
+        <Text
+          style={styles.text}
+        >{`check local storage val! : ${localValue}`}</Text>
 
-        <Text style={[styles.text, { marginTop: 20 }]}>LottieView</Text>
         <LottieView
           source={LOTTIE.testLottie}
           autoPlay
           loop
           style={{ width: 100, height: 100 }}
         />
+        <Text style={[styles.text, { marginTop: 20 }]}>this is LottieView</Text>
       </ScrollView>
     </SafeAreaView>
   );
@@ -111,8 +119,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   text: {
-    fontSize: 28,
+    fontSize: 20,
     fontWeight: "600",
+    marginBottom: 30,
   },
   platformRow: {
     marginTop: 12,

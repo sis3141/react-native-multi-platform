@@ -15,6 +15,7 @@
       "**/react-native-codegen",
       "**/@react-native-community/netinfo",
       "**/react-native-dev-menu",
+      "**/react-native-fast-image",
       "**/react-native-svg",
       "**/react-native-reanimated",
       "**/react-native-gesture-handler",
