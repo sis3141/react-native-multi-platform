@@ -55,9 +55,18 @@
             "pattern": "{react,react-native}",
             "group": "external",
             "position": "before"
+          },
+          {
+            "pattern": "@athler/platform-lib/*",
+            "group": "external",
+            "position": "before"
           }
         ],
-        "pathGroupsExcludedImportTypes": ["react", "react-native"],
+        "pathGroupsExcludedImportTypes": [
+          "react",
+          "react-native",
+          "@athler/platform-lib/*"
+        ],
         "newlines-between": "always",
         "alphabetize": { "order": "asc", "caseInsensitive": true }
       }

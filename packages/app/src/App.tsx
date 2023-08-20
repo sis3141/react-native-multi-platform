@@ -11,17 +11,18 @@ import {
   View,
 } from "react-native";
 
+import { getDeviceInfo } from "@athler/platform-lib/device-info";
+import { envConfig } from "@athler/platform-lib/dotenv";
+import { FastImage } from "@athler/platform-lib/fast-image";
 import {
-  AngleGradientText,
   COOKIE_KEYS,
-  FastImage,
   LocalStorage,
-  LottieView,
   cookieController,
-  envConfig,
-  getDeviceInfo,
-  initNetCheck,
-} from "@athler/lib";
+} from "@athler/platform-lib/localstorage";
+import { LottieView } from "@athler/platform-lib/lottie";
+import { AngleGradientText } from "@athler/platform-lib/mask";
+import { initNetCheck } from "@athler/platform-lib/net-info";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import axios from "axios";

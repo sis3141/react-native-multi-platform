@@ -1,0 +1,14 @@
+{
+  "editor.showUnused": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "explorer.sortOrder": "foldersNestsFiles",
+  "typescript.validate.enable": true,
+  "javascript.validate.enable": false,
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}

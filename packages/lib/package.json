@@ -1,8 +1,16 @@
 {
-  "name": "@athler/lib",
+  "name": "@athler/platform-lib",
   "version": "0.0.1",
   "private": true,
-  "main": "src",
+  "exports": {
+    "./localstorage": "./src/localstorage/index.ts",
+    "./device-info": "./src/device-info/index.ts",
+    "./fast-image": "./src/fast-image/index.ts",
+    "./lottie": "./src/lottie/index.ts",
+    "./mask": "./src/mask/index.ts",
+    "./net-info": "./src/net-info/index.ts",
+    "./dotenv": "./src/dotenv/index.ts"
+  },
   "peerDependencies": {
     "@react-native-community/netinfo": "*",
     "lottie-react-native": "*",
