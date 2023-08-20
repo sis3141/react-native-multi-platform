@@ -7,8 +7,8 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  View,
   TextProps,
+  View,
 } from "react-native";
 
 import {
@@ -36,10 +36,10 @@ const Stack = createStackNavigator();
 
 const TestMaskText = (props: TextProps) => (
   <AngleGradientText
+    {...props}
     startColor={"rgba(216, 60, 255, 1)"}
     endColor={"rgba(37, 164, 255, 1)"}
     angle={131}
-    {...props}
   />
 );
 
@@ -47,7 +47,6 @@ async function axiosTest() {
   console.log("try axios :", axios);
   try {
     const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1");
-
     console.log("axios ress!", res);
   } catch (error) {
     console.log("error from axios ...", error);
@@ -73,7 +72,7 @@ function HomeScreen() {
         contentContainerStyle={{ alignItems: "center" }}
       >
         <Image style={styles.logo} source={LogoSrc} />
-        <Text style={styles.text}>this is Image!</Text>
+        <Text style={[styles.text]}>this is Image!</Text>
         <FastImage style={styles.logo} source={LogoSrc} />
         <Text style={styles.text}>this is FastImage!</Text>
         <View style={styles.platformRow}>
@@ -84,12 +83,9 @@ function HomeScreen() {
         </View>
 
         <Button
-          onPress={async () => {
-            await LocalStorage.setItem(
-              "hello",
-              Math.random().toString(36).substr(2, 5)
-            );
-            const res = await LocalStorage.getItem("hello");
+          onPress={() => {
+            LocalStorage.set("hello", Math.random().toString(36).substr(2, 5));
+            const res = LocalStorage.getString("hello");
             setLocalValue(res || "");
           }}
           title="Update local value"
@@ -98,12 +94,12 @@ function HomeScreen() {
           style={styles.text}
         >{`check local storage val! : ${localValue}`}</Text>
         <Button
-          onPress={async () => {
-            await cookieController.set(
+          onPress={() => {
+            cookieController.set(
               COOKIE_KEYS.REFRESH_TOKEN,
               Math.random().toString(36).substr(2, 5)
             );
-            const res = await cookieController.get(COOKIE_KEYS.REFRESH_TOKEN);
+            const res = cookieController.get(COOKIE_KEYS.REFRESH_TOKEN);
             setCookieValue(res || "");
           }}
           title="Update cookie value"

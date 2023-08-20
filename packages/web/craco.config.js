@@ -43,7 +43,7 @@ module.exports = {
       });
 
       // Allow importing from external workspaces.
-      // monorepoWebpackTools.enableWorkspacesResolution(webpackConfig);
+      monorepoWebpackTools.enableWorkspacesResolution(webpackConfig);
       // Ensure nohoisted libraries are resolved from this workspace.
       monorepoWebpackTools.addNohoistAliases(webpackConfig);
 

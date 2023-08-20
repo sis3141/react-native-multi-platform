@@ -12,7 +12,8 @@
       "files": "**/*.+(ts|tsx)",
       "plugins": ["@typescript-eslint"],
       "rules": {
-        "no-undef": "error"
+        "no-undef": "off",
+        "no-unused-vars": "off"
       }
     },
     {

@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "name": "ROOT",
+      "path": "../"
+    },
+    {
+      "name": "packages/app",
+      "path": "../packages/app"
+    },
+    {
+      "name": "packages/lib",
+      "path": "../packages/lib"
+    },
+    {
+      "name": "packages/mobile",
+      "path": "../packages/mobile"
+    },
+    {
+      "name": "packages/server",
+      "path": "../packages/server"
+    },
+    {
+      "name": "packages/web",
+      "path": "../packages/web"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules" : true,
+      "packages/" : true,
+    },
+    "editor.showUnused": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "explorer.sortOrder": "foldersNestsFiles",
+    "typescript.validate.enable": true,
+    "javascript.validate.enable": false,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+  }
+}

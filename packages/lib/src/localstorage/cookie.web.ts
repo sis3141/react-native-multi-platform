@@ -1,4 +1,5 @@
 import Cookies from "universal-cookie";
+import { CookieGetOptions, CookieSetOptions } from "universal-cookie";
 
 import { COOKIE_KEYS } from "./unions";
 
@@ -17,15 +18,15 @@ const getDefaultSetType = () => ({
 });
 
 export const cookieController = {
-  get: (key, options) => cookies.get(key, options),
-  set: (key, value, options) =>
+  get: (key: string, options?: CookieGetOptions | undefined) =>
+    cookies.get(key, options),
+  set: (key: string, value: any, options?: CookieSetOptions | undefined) =>
     cookies.set(key, value, { ...getDefaultSetType(), ...options }),
 
-  remove: (key, options) => cookies.remove(key, options),
+  remove: (key: string, options?: CookieSetOptions | undefined) =>
+    cookies.remove(key, options),
   clear: () =>
-    Object.values(
-      COOKIE_KEYS.forEach((cookieKey) => {
-        cookies.remove(cookieKey);
-      })
-    ),
+    Object.values(COOKIE_KEYS).forEach((cookieKey) => {
+      cookies.remove(cookieKey);
+    }),
 };

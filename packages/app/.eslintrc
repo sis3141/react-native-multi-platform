@@ -4,7 +4,8 @@
     {
       "files": "**/*.+(js|jsx|ts|tsx)",
       "env": {
-        "node": true
+        "node": true,
+        "browser": false
       }
     }
   ]

@@ -1,3 +1,3 @@
 declare module "@env" {
-  export const testVal: string;
+  export const REACT_APP_TEST_VAL: string;
 }

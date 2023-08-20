@@ -2,8 +2,11 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "esnext"],
+    // "typeRoots": ["/node_modules/@types", "../../types"],
     "module": "ESNext",
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "moduleSuffixes": ["", ".native", ".web"]
   },
+  "exclude": ["node_modules"],
   "extends": "../../tsconfig.base.json"
 }

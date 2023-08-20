@@ -3,7 +3,8 @@
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "esnext"],
     "module": "ESNext",
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "moduleSuffixes": ["", ".web"]
   },
   "extends": "../../tsconfig.base.json"
 }

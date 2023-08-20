@@ -1,4 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "moduleSuffixes": ["", ".native", ".web"]
+  },
   "exclude": ["node_modules"]
 }

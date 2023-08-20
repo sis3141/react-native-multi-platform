@@ -1,1 +1,3 @@
-export { default as LocalStorage } from "@react-native-async-storage/async-storage";
+import { MMKV } from "react-native-mmkv";
+
+export const LocalStorage = new MMKV();

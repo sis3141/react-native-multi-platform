@@ -1,14 +1,16 @@
 import React from "react";
-import { Text, TextProps } from "react-native";
+import { Text } from "react-native";
 
 import MaskedView from "@react-native-masked-view/masked-view";
 import LinearGradient from "react-native-linear-gradient";
+
+import { GradientTextProps } from "./types";
 
 export const LinearGradientText = ({
   startColor,
   endColor,
   ...props
-}: React.PropsWithChildren<TextProps>) => (
+}: React.PropsWithChildren<GradientTextProps>) => (
   <MaskedView maskElement={<Text {...props} />}>
     <LinearGradient
       colors={[startColor, endColor]}
@@ -25,7 +27,7 @@ export const AngleGradientText = ({
   endColor,
   angle,
   ...props
-}: React.PropsWithChildren<TextProps>) => (
+}: React.PropsWithChildren<GradientTextProps>) => (
   <MaskedView maskElement={<Text {...props} />}>
     <LinearGradient
       colors={[startColor, endColor]}

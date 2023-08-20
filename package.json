@@ -24,7 +24,6 @@
       "**/@react-native-community/netinfo",
       "**/@react-navigation/native",
       "**/@react-navigation/stack",
-      "**/@react-native-async-storage/async-storage",
       "**/@react-native-masked-view/masked-view",
       "**/lottie-react-native"
     ]
