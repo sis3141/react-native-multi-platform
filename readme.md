@@ -1,5 +1,5 @@
 ## BUMP
-* metro package exports field support (WIP)
+* gradient text on web, axios network error on mobile (WIP)
 ## Thanks to
 * react-native, react-native-web configuration : https://github.com/mmazzarolo/react-native-universal-monorepo
 * project structure : https://github.com/alan2207/bulletproof-react  
