@@ -2,7 +2,6 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "esnext"],
-    "module": "ESNext",
     "noFallthroughCasesInSwitch": true,
     "moduleSuffixes": ["", ".web"]
   },

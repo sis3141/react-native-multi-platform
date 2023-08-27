@@ -3,7 +3,6 @@
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "esnext"],
     // "typeRoots": ["/node_modules/@types", "../../types"],
-    "module": "ESNext",
     "noFallthroughCasesInSwitch": true,
     "moduleSuffixes": ["", ".native", ".web"]
   },

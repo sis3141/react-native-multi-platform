@@ -8,6 +8,9 @@ declare global {
   module "*.png";
   module "*.jpg";
   module "*.jpeg";
+  module "@env" {
+    export const REACT_APP_TEST_VAL: string;
+  }
 }
 
 export {};

@@ -1,1 +1,1 @@
-export * from "./netInfo.native";
+export * from "./netInfo";
