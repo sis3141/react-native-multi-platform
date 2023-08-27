@@ -5,27 +5,6 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": [
-      "**/react",
-      "**/react-dom",
-      "**/react-native",
-      "**/react-native/**",
-      "**/react-native-web",
-      "**/react-native-animateable-text",
-      "**/react-native-codegen",
-      "**/react-native-dev-menu",
-      "**/react-native-fast-image",
-      "**/react-native-gesture-handler",
-      "**/react-native-reanimated",
-      "**/react-native-screens",
-      "**/react-native-svg",
-      "**/react-native-safe-area-context",
-      "**/@react-native-community/netinfo",
-      "**/@react-navigation/native",
-      "**/@react-navigation/stack",
-      "**/@react-native-masked-view/masked-view",
-      "**/lottie-react-native"
     ]
   },
   "scripts": {
@@ -47,6 +26,9 @@
   },
   "devDependencies": {
     "@react-native/eslint-config": "^0.72.2",
+    "@types/node": "^20.5.6",
+    "@types/react": "^18.2.21",
+    "@types/react-native": "^0.72.2",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "eslint": "^8.43.0",
