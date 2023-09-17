@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
+apply plugin: "com.google.gms.google-services" //? firebase-app module dependency - https://rnfirebase.io/#configure-firebase-with-android-credentials
 
 /**
  * This is the configuration block to customize your React Native Android app.
