@@ -1,6 +1,5 @@
 ## Thanks to
 
-- react-native, react-native-web configuration : https://github.com/mmazzarolo/react-native-universal-monorepo
 - project structure : https://github.com/alan2207/bulletproof-react
 
 ## Important project information
