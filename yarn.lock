@@ -73,6 +73,7 @@ __metadata:
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
+    "@notifee/react-native": ^7.8.0
     "@react-native-community/netinfo": ^9.4.1
     "@react-native-firebase/analytics": ^18.4.0
     "@react-native-firebase/app": ^18.4.0
@@ -113,6 +114,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@athler/platform-lib@workspace:packages/lib"
   peerDependencies:
+    "@notifee/react-native": "*"
     "@react-native-community/netinfo": "*"
     "@react-native-firebase/analytics": "*"
     "@react-native-firebase/app": "*"
@@ -3473,6 +3475,15 @@ __metadata:
     "@nodelib/fs.scandir": 2.1.5
     fastq: ^1.6.0
   checksum: 190c643f156d8f8f277bf2a6078af1ffde1fd43f498f187c2db24d35b4b4b5785c02c7dc52e356497b9a1b65b13edc996de08de0b961c32844364da02986dc53
+  languageName: node
+  linkType: hard
+
+"@notifee/react-native@npm:^7.8.0":
+  version: 7.8.0
+  resolution: "@notifee/react-native@npm:7.8.0"
+  peerDependencies:
+    react-native: "*"
+  checksum: 800233c9505195046e918ee42a4b11d8e84cf1846ea4a0b52599e1a40181b2bbfcab09c64b445b5a7eed98c38556c97550bce32ed24a51ce05ccd8b65047548d
   languageName: node
   linkType: hard
 
