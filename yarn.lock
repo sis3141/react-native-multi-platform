@@ -78,6 +78,7 @@ __metadata:
     "@react-native-firebase/app": ^18.4.0
     "@react-native-firebase/crashlytics": ^18.4.0
     "@react-native-firebase/dynamic-links": ^18.4.0
+    "@react-native-firebase/perf": ^18.4.0
     "@react-native-masked-view/masked-view": ^0.2.9
     "@react-native/eslint-config": ^0.72.2
     "@react-native/metro-config": ^0.72.7
@@ -3969,6 +3970,19 @@ __metadata:
     expo:
       optional: true
   checksum: f90e0ba6ecc2cb6d5a7df35657e247c4c2ac88b156cb28622c6fc8c976f14436987ea253a397b068675987ea24fd98ad815cd26a09abd8e516af39f671859c21
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/perf@npm:^18.4.0":
+  version: 18.4.0
+  resolution: "@react-native-firebase/perf@npm:18.4.0"
+  peerDependencies:
+    "@react-native-firebase/app": 18.4.0
+    expo: ">=47.0.0"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+  checksum: 812170566448a938cccdde0d9337cc3e80ecbf78a16d5b9d74807fe426abe0584d98f110eaf7952d8d5169b8f6c2425c191edc4c058be10b693d93309501ebb0
   languageName: node
   linkType: hard
 

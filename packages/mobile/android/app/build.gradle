@@ -2,6 +2,8 @@ apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 apply plugin: "com.google.gms.google-services" //? firebase-app module dependency - https://rnfirebase.io/#configure-firebase-with-android-credentials
 apply plugin: "com.google.firebase.crashlytics" //? firebase-crashlytics module dependency - https://rnfirebase.io/crashlytics/android-setup#3-apply-the-firebase-crashlytics-plugin-to-your-app
+apply plugin: "com.google.firebase.firebase-perf" //? firebase-perf module dependency - https://rnfirebase.io/perf/usage#add-the-performance-monitoring-plugin
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
