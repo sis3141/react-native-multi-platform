@@ -9,7 +9,8 @@
     "./lottie": "./src/lottie/index.ts",
     "./mask": "./src/mask/index.ts",
     "./net-info": "./src/net-info/index.ts",
-    "./dotenv": "./src/dotenv/index.ts"
+    "./dotenv": "./src/dotenv/index.ts",
+    "./firebase": "./src/firebase/index.ts"
   },
   "peerDependencies": {
     "@react-native-community/netinfo": "*",
