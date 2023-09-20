@@ -78,6 +78,7 @@ __metadata:
     "@react-native-firebase/app": ^18.4.0
     "@react-native-firebase/crashlytics": ^18.4.0
     "@react-native-firebase/dynamic-links": ^18.4.0
+    "@react-native-firebase/messaging": ^18.4.0
     "@react-native-firebase/perf": ^18.4.0
     "@react-native-masked-view/masked-view": ^0.2.9
     "@react-native/eslint-config": ^0.72.2
@@ -3970,6 +3971,15 @@ __metadata:
     expo:
       optional: true
   checksum: f90e0ba6ecc2cb6d5a7df35657e247c4c2ac88b156cb28622c6fc8c976f14436987ea253a397b068675987ea24fd98ad815cd26a09abd8e516af39f671859c21
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/messaging@npm:^18.4.0":
+  version: 18.4.0
+  resolution: "@react-native-firebase/messaging@npm:18.4.0"
+  peerDependencies:
+    "@react-native-firebase/app": 18.4.0
+  checksum: 5c55378224f6b57893b0df208244882bf7382cd6380c733a838cc7aa747fa0e008f3157d1394436d19a5b3a913b7d6f8888a390e7109712a6e3da76a1f71f680
   languageName: node
   linkType: hard
 
