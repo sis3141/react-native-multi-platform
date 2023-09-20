@@ -12,8 +12,10 @@ import java.util.List;
 
 import com.microsoft.codepush.react.CodePush; //? codepush configuration
 
+import androidx.multidex.MultiDexApplication; 
 
-public class MainApplication extends Application implements ReactApplication {
+
+public class MainApplication extends MultiDexApplication implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
       new DefaultReactNativeHost(this) {

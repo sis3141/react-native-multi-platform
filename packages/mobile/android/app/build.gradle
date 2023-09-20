@@ -84,6 +84,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     signingConfigs {
         debug {
@@ -96,6 +97,12 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            resValue 'string', 'CodePushDeploymentKey', '""'
+        }
+        releaseStaging {
+            signingConfig signingConfigs.release
+            resValue 'string', 'CodePushDeploymentKey', '<YOUR CODE PUSH STAGING KEY>'
+            matchingFallbacks = ['release']
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
@@ -103,6 +110,8 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            resValue "string", "CodePushDeploymentKey", "<YOUR CODE PUSH RELEASE KEY>"
+
         }
     }
 }
@@ -110,7 +119,7 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-
+    implementation("androidx.multidex:multidex:2.0.1")
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
