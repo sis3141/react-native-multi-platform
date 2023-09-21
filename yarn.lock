@@ -117,6 +117,8 @@ __metadata:
 "@athler/platform-lib@*, @athler/platform-lib@workspace:packages/lib":
   version: 0.0.0-use.local
   resolution: "@athler/platform-lib@workspace:packages/lib"
+  dependencies:
+    react-native-toast-notifications: ^3.4.0
   peerDependencies:
     "@notifee/react-native": "*"
     "@react-native-community/netinfo": "*"
@@ -17049,6 +17051,16 @@ __metadata:
   peerDependencies:
     react-native: "*"
   checksum: 6230b83ed9ef71ad1a1050e9a7cac2b1a51ab8730afdd6bc2cb02ed7a7cf6a3ba628902c9c845ed7d21b74f09f1a4701887fc1eb7fed11014d35292cd5f2d72a
+  languageName: node
+  linkType: hard
+
+"react-native-toast-notifications@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "react-native-toast-notifications@npm:3.4.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 734a54111e3657859d3cca9505a197bc6eb486e473e655d8aa087157de8f5e8b819083963f28e5e9155110be9a17774296bbfd721749f670c5f4e093557bd88f
   languageName: node
   linkType: hard
 

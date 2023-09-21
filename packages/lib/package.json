@@ -12,7 +12,8 @@
     "./dotenv": "./src/dotenv/index.ts",
     "./firebase": "./src/firebase/index.ts",
     "./notifee": "./src/notifee/index.ts",
-    "./webview": "./src/webview/index.ts"
+    "./webview": "./src/webview/index.ts",
+    "./toast": "./src/toast/index.ts"
   },
   "peerDependencies": {
     "@notifee/react-native": "*",
@@ -29,5 +30,8 @@
     "react-native-linear-gradient": "*",
     "react-native-mmkv": "*",
     "universal-cookie": "*"
+  },
+  "dependencies": {
+    "react-native-toast-notifications": "^3.4.0"
   }
 }
