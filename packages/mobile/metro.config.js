@@ -5,10 +5,13 @@ const {
   getMetroAndroidAssetsResolutionFix,
 } = require('react-native-monorepo-tools');
 const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix();
+const defaultConfig = getDefaultConfig(__dirname);
+const {assetExts, sourceExts} = defaultConfig.resolver;
 
 const config = {
   transformer: {
     publicPath: androidAssetsResolutionFix.publicPath,
+    babelTransformerPath: require.resolve('react-native-svg-transformer'), //? react-native-svg module configure
   },
   server: {
     // ...and to the server middleware.
@@ -20,6 +23,8 @@ const config = {
     unstable_enableSymlinks: true,
     unstable_enablePackageExports: true,
     unstable_conditionNames: ['browser', 'require', 'react-native'],
+    assetExts: assetExts.filter(ext => ext !== 'svg'), //? react-native-svg module configure
+    sourceExts: [...sourceExts, 'svg'], //? react-native-svg module configure
   },
   watchFolders: [
     path.resolve(__dirname, '../../node_modules'),
@@ -28,4 +33,4 @@ const config = {
   ],
 };
 
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+module.exports = mergeConfig(defaultConfig, config);

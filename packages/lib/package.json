@@ -13,7 +13,8 @@
     "./firebase": "./src/firebase/index.ts",
     "./notifee": "./src/notifee/index.ts",
     "./webview": "./src/webview/index.ts",
-    "./toast": "./src/toast/index.ts"
+    "./toast": "./src/toast/index.ts",
+    "./svg": "./src/svg/index.ts"
   },
   "peerDependencies": {
     "@notifee/react-native": "*",
@@ -29,9 +30,11 @@
     "react-native-fast-image": "*",
     "react-native-linear-gradient": "*",
     "react-native-mmkv": "*",
+    "react-native-svg": "*",
     "universal-cookie": "*"
   },
   "dependencies": {
+    "react-native-svg": "^13.14.0",
     "react-native-toast-notifications": "^3.4.0"
   }
 }
