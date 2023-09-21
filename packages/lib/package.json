@@ -11,7 +11,8 @@
     "./net-info": "./src/net-info/index.ts",
     "./dotenv": "./src/dotenv/index.ts",
     "./firebase": "./src/firebase/index.ts",
-    "./notifee": "./src/notifee/index.ts"
+    "./notifee": "./src/notifee/index.ts",
+    "./webview": "./src/webview/index.ts"
   },
   "peerDependencies": {
     "@notifee/react-native": "*",
